@@ -6,31 +6,157 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-*{box-sizing:border-box;font-family:Inter,Arial,sans-serif;scroll-behavior:smooth}
-body{margin:0;background:linear-gradient(120deg,#0f0f0f,#1a1a1a);color:#fff}
-header{position:fixed;top:0;width:100%;padding:20px 60px;display:flex;justify-content:space-between;align-items:center;background:rgba(0,0,0,.6);backdrop-filter:blur(10px);z-index:100}
-nav a{color:#fff;margin-left:20px;text-decoration:none;font-size:14px}
-.hero{min-height:100vh;display:flex;align-items:center;padding:120px 60px 60px;position:relative}
-.hero-text{max-width:520px;z-index:2}
-.hero-text h1{font-size:56px;margin-bottom:20px}
-.hero-text p{color:#ccc;font-size:18px;margin-bottom:30px}
-.hero-text a{display:inline-block;margin-right:15px;margin-bottom:10px;padding:14px 28px;border-radius:30px;text-decoration:none;font-weight:600}
-.btn-primary{background:#c9a14a;color:#000}
-.btn-secondary{border:1px solid #c9a14a;color:#c9a14a}
-.orb{position:absolute;right:10%;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle at 30% 30%,#c9a14a,#3a2a00);box-shadow:0 0 80px rgba(201,161,74,.4);animation:float 6s ease-in-out infinite}
-@keyframes float{0%{transform:translateY(0)}50%{transform:translateY(-20px)}100%{transform:translateY(0)}}
-section{padding:80px 60px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px}
-.card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);padding:30px;border-radius:20px}
-.card img{width:100%;border-radius:15px;margin-bottom:15px}
-.cta{text-align:center;background:#111}
-.cta-buttons a{display:inline-block;margin:15px;padding:16px 36px;border-radius:40px;text-decoration:none;font-weight:600}
-footer{text-align:center;padding:40px;font-size:14px;color:#777;background:#0b0b0b}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Inter,Arial,sans-serif}
+body{background:#0e0e0e;color:#fff;overflow-x:hidden}
+
+/* HEADER */
+header{
+position:fixed;
+top:0;width:100%;
+padding:20px 60px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,.7);
+backdrop-filter:blur(12px);
+z-index:1000;
+}
+header h2{font-weight:600}
+nav a{
+margin-left:25px;
+color:#fff;
+text-decoration:none;
+font-size:14px;
+opacity:.8;
+transition:.3s;
+}
+nav a:hover{opacity:1}
+
+/* HERO */
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+padding:140px 60px;
+position:relative;
+}
+.hero-text{max-width:520px}
+.hero-text h1{font-size:60px;margin-bottom:20px}
+.hero-text p{color:#ccc;font-size:18px;margin-bottom:35px}
+.hero-text a{
+display:inline-block;
+padding:15px 34px;
+border-radius:40px;
+margin-right:15px;
+text-decoration:none;
+font-weight:600;
+transition:.3s;
+}
+.primary{background:#c9a14a;color:#000}
+.primary:hover{transform:scale(1.05)}
+.secondary{border:1px solid #c9a14a;color:#c9a14a}
+.secondary:hover{background:#c9a14a;color:#000}
+
+.orb{
+position:absolute;
+right:8%;
+width:420px;height:420px;
+border-radius:50%;
+background:radial-gradient(circle at 30% 30%,#e0c27c,#4b3500);
+box-shadow:0 0 120px rgba(201,161,74,.5);
+animation:float 6s ease-in-out infinite;
+}
+@keyframes float{
+0%{transform:translateY(0)}
+50%{transform:translateY(-30px)}
+100%{transform:translateY(0)}
+}
+
+/* SECTIONS */
+section{padding:100px 60px}
+.section-title{
+font-size:42px;
+margin-bottom:20px;
+}
+.section-sub{color:#aaa;margin-bottom:50px}
+
+/* FEATURES */
+.features{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:30px;
+}
+.feature{
+background:rgba(255,255,255,.05);
+border:1px solid rgba(255,255,255,.1);
+padding:30px;
+border-radius:25px;
+transition:.4s;
+}
+.feature:hover{
+transform:translateY(-10px);
+background:rgba(255,255,255,.08);
+}
+
+/* MENU */
+.menu-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:40px;
+}
+.menu-box{
+background:#141414;
+padding:35px;
+border-radius:30px;
+}
+.menu-box h3{
+margin-bottom:20px;
+color:#c9a14a;
+}
+.menu-item{
+display:flex;
+justify-content:space-between;
+margin-bottom:12px;
+border-bottom:1px dashed #333;
+padding-bottom:6px;
+font-size:15px;
+}
+
+/* CTA */
+.cta{
+background:linear-gradient(135deg,#1a1a1a,#0f0f0f);
+text-align:center;
+}
+.cta h2{font-size:40px;margin-bottom:15px}
+.cta p{color:#bbb;margin-bottom:35px}
+.cta a{
+display:inline-block;
+margin:15px;
+padding:18px 40px;
+border-radius:50px;
+font-weight:600;
+text-decoration:none;
+}
+
+/* FOOTER */
+footer{
+background:#0b0b0b;
+padding:60px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:40px;
+font-size:14px;
+}
+footer h4{margin-bottom:15px;color:#c9a14a}
+footer a{color:#aaa;text-decoration:none;display:block;margin-bottom:8px}
+footer a:hover{color:#fff}
+
 @media(max-width:768px){
-header{padding:20px 30px}
 .hero{padding:120px 30px}
-.hero-text h1{font-size:40px}
-.orb{width:260px;height:260px;right:50%;transform:translateX(50%);top:15%}
+.hero-text h1{font-size:42px}
+.orb{width:260px;height:260px;right:50%;transform:translateX(50%)}
+header{padding:20px 30px}
+section{padding:80px 30px}
 }
 </style>
 </head>
@@ -38,51 +164,94 @@ header{padding:20px 30px}
 <body>
 
 <header>
-  <h2>Bar Aurora</h2>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="menu.html">Menù</a>
-    <a href="contatti.html">Contatti</a>
-  </nav>
+<h2>Bar Aurora</h2>
+<nav>
+<a href="#menu">Menù</a>
+<a href="#esperienza">Esperienza</a>
+<a href="#contatti">Contatti</a>
+</nav>
 </header>
 
-<section class="hero">
-  <div class="hero-text">
-    <h1>Esperienze serali di qualità</h1>
-    <p>Cocktail artigianali, atmosfera elegante e musica selezionata nel cuore della città.</p>
-    <a href="menu.html" class="btn-primary">Scopri il menù</a>
-    <a href="contatti.html" class="btn-secondary">Prenota un tavolo</a>
-  </div>
-  <div class="orb"></div>
+<div class="hero">
+<div class="hero-text">
+<h1>Il bar che trasforma la notte</h1>
+<p>Cocktail premium, atmosfera elegante e serate indimenticabili.</p>
+<a href="#menu" class="primary">Scopri il menù</a>
+<a href="#contatti" class="secondary">Prenota ora</a>
+</div>
+<div class="orb"></div>
+</div>
+
+<section id="esperienza">
+<h2 class="section-title">Perché scegliere Bar Aurora</h2>
+<p class="section-sub">Non è solo bere, è vivere un’esperienza</p>
+
+<div class="features">
+<div class="feature">🍸 Cocktail artigianali con ingredienti premium</div>
+<div class="feature">🎶 DJ set & musica lounge ogni weekend</div>
+<div class="feature">🌙 Ambiente elegante e moderno</div>
+<div class="feature">📍 Posizione centrale</div>
+</div>
 </section>
 
-<section>
-  <div class="grid">
-    <div class="card">
-      <img src="images/cocktails.jpg">
-      <h3>🍸 Cocktail Signature</h3>
-      <p>Ricette originali create dai nostri bartender.</p>
-    </div>
-    <div class="card">
-      <img src="images/ambiente.jpg">
-      <h3>🎶 Atmosfera Unica</h3>
-      <p>Musica lounge e DJ set nel weekend.</p>
-    </div>
-  </div>
+<section id="menu">
+<h2 class="section-title">Il nostro Menù</h2>
+
+<div class="menu-grid">
+
+<div class="menu-box">
+<h3>🍸 Cocktail Signature</h3>
+<div class="menu-item"><span>Negroni Aurora</span><span>€11</span></div>
+<div class="menu-item"><span>Margarita Gold</span><span>€10</span></div>
+<div class="menu-item"><span>Old Fashioned</span><span>€12</span></div>
+<div class="menu-item"><span>Espresso Martini</span><span>€11</span></div>
+</div>
+
+<div class="menu-box">
+<h3>🍺 Birre</h3>
+<div class="menu-item"><span>Lager artigianale</span><span>€6</span></div>
+<div class="menu-item"><span>IPA</span><span>€7</span></div>
+<div class="menu-item"><span>Weiss</span><span>€6</span></div>
+</div>
+
+<div class="menu-box">
+<h3>🍷 Vini</h3>
+<div class="menu-item"><span>Rosso della casa</span><span>€5</span></div>
+<div class="menu-item"><span>Bianco secco</span><span>€5</span></div>
+<div class="menu-item"><span>Prosecco</span><span>€6</span></div>
+</div>
+
+<div class="menu-box">
+<h3>🍔 Food</h3>
+<div class="menu-item"><span>Hamburger gourmet</span><span>€13</span></div>
+<div class="menu-item"><span>Tagliere misto</span><span>€15</span></div>
+<div class="menu-item"><span>Patatine</span><span>€5</span></div>
+</div>
+
+</div>
 </section>
 
-<section class="cta">
-  <h2>Prenota ora la tua serata</h2>
-  <p>Contattaci facilmente in pochi secondi</p>
-
-  <div class="cta-buttons">
-    <a href="contatti.html" class="btn-primary">📅 Prenota tavolo</a>
-    <a href="https://wa.me/39000000000" class="btn-secondary">💬 WhatsApp</a>
-  </div>
+<section class="cta" id="contatti">
+<h2>Prenota la tua serata</h2>
+<p>Un click e il tuo tavolo è assicurato</p>
+<a href="https://wa.me/39000000000" class="primary">💬 WhatsApp</a>
+<a href="tel:+39000000000" class="secondary">📞 Chiama</a>
 </section>
 
 <footer>
-© 2025 Bar Aurora – Sito demo per attività locali
+<div>
+<h4>Bar Aurora</h4>
+<p>Via Roma 123<br>Centro città</p>
+</div>
+<div>
+<h4>Orari</h4>
+<p>Lun–Dom<br>18:00 – 02:00</p>
+</div>
+<div>
+<h4>Contatti</h4>
+<a href="#">Instagram</a>
+<a href="#">Facebook</a>
+</div>
 </footer>
 
 </body>
