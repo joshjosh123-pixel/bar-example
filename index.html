@@ -1,190 +1,38 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <title>Bar Aurora – Cocktail & Lounge</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Bar Aurora | Cocktail & Lounge</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    * {
-      box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      background: linear-gradient(120deg, #0f0f0f, #1a1a1a);
-      color: #fff;
-    }
-
-    header {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      padding: 20px 60px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: rgba(0,0,0,0.6);
-      backdrop-filter: blur(10px);
-      z-index: 100;
-    }
-
-    header h2 {
-      margin: 0;
-      font-weight: 600;
-      letter-spacing: 1px;
-    }
-
-    nav a {
-      color: #fff;
-      margin-left: 20px;
-      text-decoration: none;
-      font-size: 14px;
-      opacity: 0.9;
-    }
-
-    nav a:hover {
-      opacity: 1;
-    }
-
-    .hero {
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      padding: 120px 60px 0;
-      position: relative;
-    }
-
-    .hero-text {
-      max-width: 520px;
-      z-index: 2;
-    }
-
-    .hero-text span {
-      background: rgba(255,255,255,0.1);
-      padding: 6px 14px;
-      border-radius: 20px;
-      font-size: 13px;
-      display: inline-block;
-      margin-bottom: 20px;
-    }
-
-    .hero-text h1 {
-      font-size: 56px;
-      line-height: 1.1;
-      margin-bottom: 20px;
-    }
-
-    .hero-text p {
-      font-size: 18px;
-      color: #ccc;
-      margin-bottom: 30px;
-    }
-
-    .hero-text a {
-      text-decoration: none;
-      background: #c9a14a;
-      color: #000;
-      padding: 14px 26px;
-      border-radius: 30px;
-      font-weight: 600;
-      margin-right: 10px;
-    }
-
-    .orb {
-      position: absolute;
-      right: 10%;
-      width: 380px;
-      height: 380px;
-      border-radius: 50%;
-      background: radial-gradient(circle at 30% 30%, #c9a14a, #3a2a00);
-      box-shadow: 0 0 80px rgba(201,161,74,0.4);
-      animation: float 6s ease-in-out infinite;
-    }
-
-    @keyframes float {
-      0% { transform: translateY(0); }
-      50% { transform: translateY(-20px); }
-      100% { transform: translateY(0); }
-    }
-
-    section {
-      padding: 80px 60px;
-    }
-
-    h2.section-title {
-      font-size: 36px;
-      margin-bottom: 40px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 30px;
-    }
-
-    .card {
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.1);
-      padding: 30px;
-      border-radius: 20px;
-      backdrop-filter: blur(10px);
-    }
-
-    .menu-item {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 15px;
-    }
-
-    .menu-item span {
-      color: #c9a14a;
-    }
-
-    .cta {
-      background: #111;
-      text-align: center;
-      padding: 80px 40px;
-    }
-
-    .cta a {
-      background: #c9a14a;
-      color: #000;
-      padding: 16px 32px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    footer {
-      padding: 40px;
-      text-align: center;
-      font-size: 14px;
-      color: #777;
-      background: #0b0b0b;
-    }
-
-    @media (max-width: 768px) {
-      header {
-        padding: 20px 30px;
-      }
-      .hero {
-        padding: 120px 30px 0;
-      }
-      .hero-text h1 {
-        font-size: 40px;
-      }
-      .orb {
-        width: 260px;
-        height: 260px;
-        right: 50%;
-        transform: translateX(50%);
-        top: 20%;
-      }
-    }
-  </style>
+<style>
+*{box-sizing:border-box;font-family:Inter,Arial,sans-serif;scroll-behavior:smooth}
+body{margin:0;background:linear-gradient(120deg,#0f0f0f,#1a1a1a);color:#fff}
+header{position:fixed;top:0;width:100%;padding:20px 60px;display:flex;justify-content:space-between;align-items:center;background:rgba(0,0,0,.6);backdrop-filter:blur(10px);z-index:100}
+nav a{color:#fff;margin-left:20px;text-decoration:none;font-size:14px}
+.hero{min-height:100vh;display:flex;align-items:center;padding:120px 60px 60px;position:relative}
+.hero-text{max-width:520px;z-index:2}
+.hero-text h1{font-size:56px;margin-bottom:20px}
+.hero-text p{color:#ccc;font-size:18px;margin-bottom:30px}
+.hero-text a{display:inline-block;margin-right:15px;margin-bottom:10px;padding:14px 28px;border-radius:30px;text-decoration:none;font-weight:600}
+.btn-primary{background:#c9a14a;color:#000}
+.btn-secondary{border:1px solid #c9a14a;color:#c9a14a}
+.orb{position:absolute;right:10%;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle at 30% 30%,#c9a14a,#3a2a00);box-shadow:0 0 80px rgba(201,161,74,.4);animation:float 6s ease-in-out infinite}
+@keyframes float{0%{transform:translateY(0)}50%{transform:translateY(-20px)}100%{transform:translateY(0)}}
+section{padding:80px 60px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px}
+.card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);padding:30px;border-radius:20px}
+.card img{width:100%;border-radius:15px;margin-bottom:15px}
+.cta{text-align:center;background:#111}
+.cta-buttons a{display:inline-block;margin:15px;padding:16px 36px;border-radius:40px;text-decoration:none;font-weight:600}
+footer{text-align:center;padding:40px;font-size:14px;color:#777;background:#0b0b0b}
+@media(max-width:768px){
+header{padding:20px 30px}
+.hero{padding:120px 30px}
+.hero-text h1{font-size:40px}
+.orb{width:260px;height:260px;right:50%;transform:translateX(50%);top:15%}
+}
+</style>
 </head>
 
 <body>
@@ -192,83 +40,49 @@
 <header>
   <h2>Bar Aurora</h2>
   <nav>
-    <a href="#chi-siamo">Chi siamo</a>
-    <a href="#menu">Menù</a>
-    <a href="#eventi">Eventi</a>
-    <a href="#contatti">Contatti</a>
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menù</a>
+    <a href="contatti.html">Contatti</a>
   </nav>
 </header>
 
 <section class="hero">
   <div class="hero-text">
-    <span>🍸 Cocktail Bar & Lounge</span>
-    <h1>Il tuo punto d’incontro serale</h1>
-    <p>
-      Cocktail artigianali, atmosfera elegante e musica selezionata.
-      Vivi un’esperienza unica ogni sera.
-    </p>
-    <a href="#menu">Scopri il menù</a>
-    <a href="#contatti">Prenota ora</a>
+    <h1>Esperienze serali di qualità</h1>
+    <p>Cocktail artigianali, atmosfera elegante e musica selezionata nel cuore della città.</p>
+    <a href="menu.html" class="btn-primary">Scopri il menù</a>
+    <a href="contatti.html" class="btn-secondary">Prenota un tavolo</a>
   </div>
   <div class="orb"></div>
 </section>
 
-<section id="chi-siamo">
-  <h2 class="section-title">Chi siamo</h2>
-  <p>
-    Bar Aurora è un cocktail bar moderno nel cuore della città.
-    Offriamo drink di qualità, un ambiente raffinato e serate pensate
-    per chi ama vivere la notte con stile.
-  </p>
-</section>
-
-<section id="menu">
-  <h2 class="section-title">Menù</h2>
+<section>
   <div class="grid">
     <div class="card">
-      <h3>🍹 Cocktail</h3>
-      <div class="menu-item">Negroni <span>€10</span></div>
-      <div class="menu-item">Margarita <span>€9</span></div>
-      <div class="menu-item">Moscow Mule <span>€9</span></div>
+      <img src="images/cocktails.jpg">
+      <h3>🍸 Cocktail Signature</h3>
+      <p>Ricette originali create dai nostri bartender.</p>
     </div>
     <div class="card">
-      <h3>🍷 Vini</h3>
-      <div class="menu-item">Rosso della casa <span>€5</span></div>
-      <div class="menu-item">Bianco secco <span>€5</span></div>
-    </div>
-    <div class="card">
-      <h3>🍺 Birre</h3>
-      <div class="menu-item">Artigianale IPA <span>€6</span></div>
-      <div class="menu-item">Lager <span>€4</span></div>
+      <img src="images/ambiente.jpg">
+      <h3>🎶 Atmosfera Unica</h3>
+      <p>Musica lounge e DJ set nel weekend.</p>
     </div>
   </div>
 </section>
 
-<section id="eventi">
-  <h2 class="section-title">Eventi</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>🎶 DJ Night</h3>
-      <p>Ogni venerdì e sabato con DJ set dal vivo.</p>
-    </div>
-    <div class="card">
-      <h3>🎉 Eventi privati</h3>
-      <p>Compleanni, feste aziendali e aperitivi su prenotazione.</p>
-    </div>
-  </div>
-</section>
+<section class="cta">
+  <h2>Prenota ora la tua serata</h2>
+  <p>Contattaci facilmente in pochi secondi</p>
 
-<section id="contatti" class="cta">
-  <h2 class="section-title">Prenota il tuo tavolo</h2>
-  <p>Chiamaci o scrivici su WhatsApp per riservare.</p>
-  <br>
-  <a href="tel:+39000000000">📞 Chiama ora</a>
-  <br><br>
-  <a href="https://wa.me/39000000000">💬 WhatsApp</a>
+  <div class="cta-buttons">
+    <a href="contatti.html" class="btn-primary">📅 Prenota tavolo</a>
+    <a href="https://wa.me/39000000000" class="btn-secondary">💬 WhatsApp</a>
+  </div>
 </section>
 
 <footer>
-  © 2025 Bar Aurora
+© 2025 Bar Aurora – Sito demo per attività locali
 </footer>
 
 </body>
