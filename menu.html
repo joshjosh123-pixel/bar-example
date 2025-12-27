@@ -6,9 +6,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
 body{margin:0;font-family:Inter,Arial;background:#111;color:#fff}
-header,footer{text-align:center;padding:30px}
+header{text-align:center;padding:40px}
 section{padding:60px}
-.menu-item{display:flex;justify-content:space-between;margin-bottom:15px;border-bottom:1px solid #333;padding-bottom:10px}
+.menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:40px}
+.box{background:#161616;padding:30px;border-radius:25px}
+.box h3{color:#c9a14a;margin-bottom:20px}
+.item{display:flex;justify-content:space-between;margin-bottom:10px;border-bottom:1px dashed #333}
 a{color:#c9a14a;text-decoration:none}
 </style>
 </head>
@@ -21,19 +24,42 @@ a{color:#c9a14a;text-decoration:none}
 </header>
 
 <section>
-<h2>🍸 Cocktail</h2>
-<div class="menu-item">Negroni <span>€10</span></div>
-<div class="menu-item">Margarita <span>€9</span></div>
-<div class="menu-item">Old Fashioned <span>€11</span></div>
+<div class="menu-grid">
 
-<h2>🍷 Vini</h2>
-<div class="menu-item">Rosso della casa <span>€5</span></div>
-<div class="menu-item">Bianco secco <span>€5</span></div>
+<div class="box">
+<h3>🍔 Cibo</h3>
+<div class="item"><span>Hamburger gourmet</span><span>€13</span></div>
+<div class="item"><span>Cheeseburger</span><span>€12</span></div>
+<div class="item"><span>Club sandwich</span><span>€11</span></div>
+<div class="item"><span>Tagliere salumi</span><span>€15</span></div>
+<div class="item"><span>Tagliere formaggi</span><span>€14</span></div>
+<div class="item"><span>Patatine fritte</span><span>€5</span></div>
+<div class="item"><span>Nachos</span><span>€7</span></div>
+<div class="item"><span>Insalata Caesar</span><span>€10</span></div>
+<div class="item"><span>Wrap pollo</span><span>€9</span></div>
+<div class="item"><span>Panino vegetariano</span><span>€10</span></div>
+</div>
+
+<div class="box">
+<h3>🍸 Cocktail</h3>
+<div class="item"><span>Negroni</span><span>€11</span></div>
+<div class="item"><span>Margarita</span><span>€10</span></div>
+<div class="item"><span>Old Fashioned</span><span>€12</span></div>
+<div class="item"><span>Espresso Martini</span><span>€11</span></div>
+<div class="item"><span>Mojito</span><span>€9</span></div>
+</div>
+
+<div class="box">
+<h3>🍷 Bevande</h3>
+<div class="item"><span>Vino rosso</span><span>€5</span></div>
+<div class="item"><span>Vino bianco</span><span>€5</span></div>
+<div class="item"><span>Prosecco</span><span>€6</span></div>
+<div class="item"><span>Birra artigianale</span><span>€6</span></div>
+<div class="item"><span>Acqua / Soft drink</span><span>€3</span></div>
+</div>
+
+</div>
 </section>
-
-<footer>
-© Bar Aurora
-</footer>
 
 </body>
 </html>
