@@ -1,162 +1,43 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="it">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Il Nettare di Giuggiole</title>
-
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
-<style>
-body {
-    margin:0;
-    font-family:'Poppins',sans-serif;
-    background:#111;
-    color:#eee;
-}
-
-/* NAV */
-nav {
-    position:fixed;
-    width:100%;
-    display:flex;
-    justify-content:space-between;
-    padding:20px 40px;
-    background:rgba(0,0,0,0.7);
-    backdrop-filter:blur(10px);
-    z-index:1000;
-}
-
-nav h1 {
-    font-family:'Playfair Display';
-    color:#e6b980;
-}
-
-nav a {
-    margin-left:20px;
-    color:white;
-    text-decoration:none;
-}
-
-/* HERO */
-.hero {
-    height:100vh;
-    background:url('https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c') center/cover;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-}
-
-.hero h2 {
-    font-family:'Playfair Display';
-    font-size:3rem;
-    animation:fadeUp 1.5s ease;
-}
-
-.hero p {
-    opacity:0.8;
-}
-
-/* SECTION */
-section {
-    padding:80px 40px;
-    max-width:1200px;
-    margin:auto;
-}
-
-.title {
-    font-family:'Playfair Display';
-    font-size:2rem;
-    margin-bottom:20px;
-    color:#e6b980;
-}
-
-/* GRID */
-.grid {
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-}
-
-.card {
-    background:#1b1b1b;
-    padding:20px;
-    border-radius:12px;
-    transition:0.3s;
-}
-
-.card:hover {
-    transform:translateY(-10px);
-}
-
-/* REVIEWS */
-.review {
-    font-style:italic;
-    opacity:0.9;
-}
-
-/* INFO */
-.info p {
-    margin:8px 0;
-}
-
-/* FORM */
-form {
-    max-width:400px;
-}
-
-input, textarea {
-    width:100%;
-    margin-bottom:10px;
-    padding:10px;
-    border:none;
-    border-radius:5px;
-}
-
-button {
-    padding:10px;
-    background:#e6b980;
-    border:none;
-    cursor:pointer;
-}
-
-/* FOOTER */
-footer {
-    text-align:center;
-    padding:20px;
-    background:#000;
-}
-
-/* ANIM */
-@keyframes fadeUp {
-    from {opacity:0; transform:translateY(20px);}
-    to {opacity:1; transform:translateY(0);}
-}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <nav>
-    <h1>Il Nettare</h1>
-    <div>
-        <a href="#about">Sobre</a>
-        <a href="#menu">Cocina</a>
-        <a href="#reviews">Opiniones</a>
-        <a href="#reserva">Reserva</a>
-    </div>
+  <h1>Il Nettare</h1>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="menu.html">Cucina</a>
+    <a href="recensioni.html">Recensioni</a>
+    <a href="contatti.html">Contatti</a>
+  </div>
 </nav>
 
-<section class="hero">
-    <div>
-        <h2>Un rincón íntimo en Angera</h2>
-        <p>Cocina auténtica, vino excelente y momentos inolvidables</p>
-    </div>
+<header class="hero">
+  <div>
+    <h2>Un angolo autentico nel cuore di Angera</h2>
+    <p>Cucina stagionale, vini selezionati e atmosfera intima</p>
+  </div>
+</header>
+
+<section>
+  <h2 class="title">Benvenuti</h2>
+  <p>
+  Nel centro storico di Angera, Il Nettare di Giuggiole offre un'esperienza culinaria autentica.
+  Piatti curati, ingredienti freschi e un servizio accogliente rendono ogni visita speciale.
+  </p>
 </section>
 
-<section id="about">
-    <h2 class="title">La experiencia</h2>
-    <p>
-    Situado en el corazón histórico de Angera, Il Nettare di Giuggiole ofrece 
-    una
+<footer>
+  <p>© 2026 Il Nettare di Giuggiole</p>
+</footer>
+
+</body>
+</html>
